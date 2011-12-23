@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# The gps config appropriate for this device
-PRODUCT_COPY_FILES += \
-    device/htc/mecha/gps.conf:system/etc/gps.conf
-
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
@@ -76,12 +72,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 
-# Permission xmls
+# Devie XML Permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
-# config xml file
+# Device XML Properties
 PRODUCT_COPY_FILES += \
     device/htc/mecha/voicemail-conf.xml:system/etc/voicemail-conf.xml \
     device/htc/mecha/apns-conf.xml:system/etc/apns-conf.xml
@@ -90,7 +86,7 @@ PRODUCT_PACKAGES += \
     lights.mecha \
     sensors.mecha
 
-# Keylayouts
+# Keylayouts and Touchscreen
 PRODUCT_COPY_FILES += \
     device/htc/mecha/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     device/htc/mecha/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
@@ -181,9 +177,10 @@ PRODUCT_COPY_FILES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# mecha uses high-density artwork where available
-# PRODUCT_LOCALES += hdpi
+# High-density art, but English locale
 PRODUCT_LOCALES += en
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_COPY_FILES += \
     device/htc/mecha/vold.fstab:system/etc/vold.fstab
@@ -238,3 +235,7 @@ PRODUCT_NAME := htc_mecha
 PRODUCT_DEVICE := mecha
 PRODUCT_MODEL := ADR6400L
 PRODUCT_MANUFACTURER := HTC
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ ro.telephony.ril.v3=datacall \
+ ro.telephony.ril.v3=signalstrength
