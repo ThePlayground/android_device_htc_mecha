@@ -12,6 +12,16 @@ ro.config.disable_hw_accel=false
 ro.sf.lcd_density=192
 debug.fb.rgb565=0
 
+# qcom Display Props
+debug.sf.hw=1
+debug.composition.type=dyn
+ro.sf.compbypass.enable=1
+#debug.enabletr=true
+
+# qcom Build Props
+com.qc.hardware=true
+com.qc.hdmi_out=false
+
 # Retry Configurations
 ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
