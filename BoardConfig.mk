@@ -32,7 +32,7 @@ USE_CAMERA_STUB := true
 -include vendor/htc/mecha/BoardConfigVendor.mk
 
 # Workaround for mecha broken overlay scaling
-# BOARD_OVERLAY_MINIFICATION_LIMIT := 2
+BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
 TARGET_BOOTLOADER_BOARD_NAME := mecha
 
