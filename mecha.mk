@@ -207,7 +207,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/mecha/kernel/sbin/speedtweak.sh:root/sbin/speedtweak.sh \
     device/htc/mecha/kernel/sbin/zram:root/sbin/zram \
-    device/htc/mecha/kernel/xbin/wget:system/xbin/wget \
+    device/htc/mecha/kernel/xbin/wget:system/xbin/wget
 
 # init.d Customization
 PRODUCT_COPY_FILES += \
