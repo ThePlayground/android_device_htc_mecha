@@ -117,3 +117,4 @@ ro.htc.device.slot1=RUIM
 
 # USB Mount
 persist.sys.usb.config=mass_storage,adb
+persist.service.adb.enable=1
