@@ -99,6 +99,16 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
     device/htc/mecha/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/mecha/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+    device/htc/mecha/firmware/fw_bcm4329.bin:system/etc/firmware/fw_bcm4329.bin \
+    device/htc/mecha/firmware/fw_bcm4329_apsta.bin:system/etc/firmware/fw_bcm4329_apsta.bin \
+    device/htc/mecha/firmware/default.acdb:system/etc/firmware/default.acdb \
+    device/htc/mecha/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
+    device/htc/mecha/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
+    device/htc/mecha/firmware/mp2_dec_mc.fw:system/etc/firmware/mp2_dec_mc.fw \
+
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
     device/htc/mecha/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
