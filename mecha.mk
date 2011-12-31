@@ -84,7 +84,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     lights.mecha \
-    sensors.mecha
+    sensors.mecha \
+    gps.mecha
 
 # Keylayouts and Touchscreen
 PRODUCT_COPY_FILES += \
