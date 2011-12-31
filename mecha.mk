@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
     device/htc/mecha/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    device/htc/mecha/system/etc/gps-conf.xml:system/etc/gps-conf.xml \
+    device/htc/mecha/system/etc/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
     lights.mecha \
@@ -90,16 +90,16 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts and Touchscreen
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/system/etc/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/mecha/system/etc/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/mecha/system/etc/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/htc/mecha/system/etc/keychars/mecha-keypad.kcm.bin:system/usr/keychars/mecha-keypad.kcm.bin \
-    device/htc/mecha/system/etc/keychars/mecha-keypad-v0.kcm.bin:system/usr/keychars/mecha-keypad-v0.kcm.bin \
-    device/htc/mecha/system/etc/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/htc/mecha/system/etc/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/mecha/system/etc/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/mecha/system/etc/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
-    device/htc/mecha/system/etc/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
+    device/htc/mecha/system/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/mecha/system/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/mecha/system/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/htc/mecha/system/usr/keychars/mecha-keypad.kcm.bin:system/usr/keychars/mecha-keypad.kcm.bin \
+    device/htc/mecha/system/usr/keychars/mecha-keypad-v0.kcm.bin:system/usr/keychars/mecha-keypad-v0.kcm.bin \
+    device/htc/mecha/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/mecha/system/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/mecha/system/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/htc/mecha/system/usr/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
+    device/htc/mecha/system/usr/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
 
 # Firmware
 PRODUCT_COPY_FILES += \
