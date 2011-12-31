@@ -14,6 +14,13 @@ ro.sf.lcd_density=192
 
 # Device Display
 debug.fb.rgb565=0
+
+# Qualcomm Display
+debug.sf.hw=1
+debug.composition.type=dyn
+ro.sf.compbypass.enable=1
+com.qc.hardware=true
+debug.enabletr=true
 com.qc.hdmi_out=false
 
 # Retry Configurations
