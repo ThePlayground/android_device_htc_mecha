@@ -46,8 +46,6 @@ USE_IPV6_ROUTE := true
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
-
 # Hack for improper scaling.
 # BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
@@ -61,6 +59,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_SPECIFIC_HEADER_PATH := device/htc/mecha/include
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
