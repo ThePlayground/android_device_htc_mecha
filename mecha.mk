@@ -222,7 +222,7 @@ $(call inherit-product, device/htc/common/common.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_BRAND := verizon_wwe
+PRODUCT_BRAND := HTC
 PRODUCT_NAME := htc_mecha
 PRODUCT_DEVICE := mecha
 PRODUCT_MODEL := ADR6400L
