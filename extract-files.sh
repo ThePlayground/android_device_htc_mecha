@@ -20,7 +20,6 @@ MANUFACTURER=htc
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 adb pull /system/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/btld ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/dmagent ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -28,7 +27,6 @@ adb pull /system/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprieta
 adb pull /system/bin/ipd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/ip ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/logcat2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/lsc_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/netmgrd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/rild_ims ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -40,23 +38,15 @@ adb pull /system/bin/tc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/xbin/wireless_modem ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/agps_rm ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libq3dtools_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libaudioeq.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libril-qc-1.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libril-qcril-hook-oem.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libril_ims.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libposteffect.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libping_apps.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libping_lte_rpc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -112,21 +102,18 @@ adb pull /system/lib/libqdp.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:obj/lib/libril.so \\
 
 # All the blobs necessary for mecha
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/awb_camera:/system/bin/awb_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bma150_usr:/system/bin/bma150_usr \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/dmagent:/system/bin/dmagent \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/ipd:/system/bin/ipd \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/ip:/system/bin/ip \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/lsc_camera:/system/bin/lsc_camera \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/rild_ims:/system/bin/rild_ims \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
@@ -140,14 +127,9 @@ PRODUCT_COPY_FILES += \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/gps.mecha.so:/system/lib/hw/gps.mecha.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libauth.so:/system/lib/libauth.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libcm.so:/system/lib/libcm.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libcm_fusion.so:/system/lib/libcm_fusion.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libdiag.so:/system/lib/libdiag.so \\
@@ -156,17 +138,14 @@ PRODUCT_COPY_FILES += \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libdsm.so:/system/lib/libdsm.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libgsdi_exp.so:/system/lib/libgsdi_exp.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libgstk_exp.so:/system/lib/libgstk_exp.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libidl.so:/system/lib/libidl.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libmmgsdilib.so:/system/lib/libmmgsdilib.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libnetmgr.so:/system/lib/libnetmgr.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/libnv.so:/system/lib/libnv.so \\
-    vendor/$MANUFACTURER/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/liboncrpc.so:/system/lib/liboncrpc.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/liboem_rapi.so:/system/lib/liboem_rapi.so \\
     vendor/$MANUFACTURER/__DEVICE__/proprietary/liboem_rapi_fusion.so:/system/lib/liboem_rapi_fusion.so \\
