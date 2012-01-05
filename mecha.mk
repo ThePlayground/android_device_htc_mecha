@@ -205,11 +205,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/mecha/kernel/etc/init.d/01vdd_levels:system/etc/init.d/01vdd_levels \
 
-# Verizon Applications
-PRODUCT_COPY_FILES += \
-    vendor/twisted/verizon/app/VZWAPNLib.apk:system/app/VZWAPNLib.apk \
-    vendor/twisted/verizon/app/VZWAPNService.apk:system/app/VZWAPNService.apk
-
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
