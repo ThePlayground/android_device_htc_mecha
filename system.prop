@@ -29,6 +29,7 @@ ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
 
 # Radio Properties
 rild.libpath=/system/lib/libril-qc-1.so
+ro.telephony.ril.v3=signalstrength
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
@@ -45,7 +46,6 @@ persist.rild.ril.ltedrtable=max_retries=infinite,10000
 persist.rild.ril.adminAPN=vzwadmin
 persist.radio.agps.mode=6
 DEVICE_PROVISIONED=1
-debug.sf.hw=1
 
 # CNE Module
 persist.cne.UseCne=false
