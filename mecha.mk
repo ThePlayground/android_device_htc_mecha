@@ -18,7 +18,6 @@
 
 PRODUCT_COPY_FILES += \
     device/htc/mecha/kernel/init.mecha.rc:root/init.mecha.rc \
-    device/htc/mecha/kernel/init.mecha.usb.rc:root/init.mecha.usb.rc \
     device/htc/mecha/kernel/ueventd.mecha.rc:root/ueventd.mecha.rc 
 
 ## (2) Also get non-open-source GSM-specific aspects if available
