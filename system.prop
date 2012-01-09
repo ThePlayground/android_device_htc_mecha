@@ -89,6 +89,7 @@ ro.config.svlte1x=true
 # Default Network Type
 # 8 => CDMA/EVDO/LTE auto mode
 ro.telephony.default_network=8
+service.modem.enable=1
 
 # Default Interfaces
 wifi.interface=eth0
