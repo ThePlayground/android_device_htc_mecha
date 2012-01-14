@@ -45,9 +45,9 @@ USE_IPV6_ROUTE := true
 TARGET_CAMERA_WRAPPER := nexus
 ifneq ($(TARGET_CAMERA_WRAPPER),)
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/proprietary/libcamera-nexus.so:obj/lib/libcamera-nexus.so \
-    device/htc/msm7x30-common/proprietary/libcamera-nexus.so:obj/lib/libcamera.so \
-    device/htc/msm7x30-common/proprietary/libcamera-nexus.so:/system/lib/libcamera.so
+    device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera-$(TARGET_CAMERA_WRAPPER).so \
+    device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera.so \
+    device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:/system/lib/libcamera.so
 else
 PRODUCT_COPY_FILES += \
     vendor/htc/mecha/proprietary/libcamera.so:obj/lib/libcamera.so \
