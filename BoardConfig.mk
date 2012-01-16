@@ -42,10 +42,11 @@ BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 BOARD_HAS_EXTRA_SYS_PROPS := true
 USE_IPV6_ROUTE := true
 
-TARGET_CAMERA_WRAPPER := nexus
+# TARGET_CAMERA_WRAPPER := nexus
 ifneq ($(TARGET_CAMERA_WRAPPER),)
 PRODUCT_COPY_FILES += \
     device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera-$(TARGET_CAMERA_WRAPPER).so \
+    device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:/system/lib/libcamera-$(TARGET_CAMERA_WRAPPER).so
     device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera.so \
     device/htc/mecha/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:/system/lib/libcamera.so
 else
