@@ -100,6 +100,7 @@ ro.opengles.version=131072
 
 # Dalvik Heapsize
 dalvik.vm.heapsize=64m
+dalvik.vm.heapgrowthlimit=32m
 
 # Agps Default Mode
 ro.ril.def.agps.mode=6
