@@ -202,7 +202,16 @@ PRODUCT_COPY_FILES += \
 
 # init.d Customization
 PRODUCT_COPY_FILES += \
-    device/htc/mecha/kernel/etc/init.d/01vdd_levels:system/etc/init.d/01vdd_levels \
+    device/htc/mecha/kernel/etc/init.d/01vdd_levels:system/etc/init.d/01vdd_levels
+
+# Verizon Customization
+PRODUCT_COPY_FILES += \
+    device/htc/mecha/verizon/system/app/appdirectedsmspermission.apk:system/app/appdirectedsmspermission.apk \
+    device/htc/mecha/verizon/system/app/VerizonSSOEngine.apk:system/app/VerizonSSOEngine.apk \
+    device/htc/mecha/verizon/system/app/vzwapnpermission.apk:system/app/vzwapnpermission.apk \
+    device/htc/mecha/verizon/system/app/VzWBAClient.apk:system/app/VzWBAClient.apk \
+    device/htc/mecha/verizon/system/app/VZWInstaller.apk:system/app/VZWInstaller.apk \
+    device/htc/mecha/verizon/system/app/VzwLBSPerm.apk:system/app/VzwLBSPerm.apk
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
