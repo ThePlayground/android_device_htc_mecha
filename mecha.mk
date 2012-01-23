@@ -165,6 +165,24 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
     device/htc/mecha/system/etc/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
 
+# OMX Config Profiles
+PRODUCT_COPY_FILES += \
+    device/htc/mecha/system/etc/01_pv_omx_wrapper.yac:system/etc/01_pv_omx_wrapper.yac \
+    device/htc/mecha/system/etc/mtpdb.yac:system/etc/mtpdb.yac \
+    device/htc/mecha/system/etc/pvasflocal.yac:system/etc/pvasflocal.yac \
+    device/htc/mecha/system/etc/pvasfstreaming.yac:system/etc/pvasfstreaming.yac \
+    device/htc/mecha/system/etc/pvextensions.yac:system/etc/pvextensions.yac \
+    device/htc/mecha/system/etc/pvOMXcfg.ini:system/etc/pvOMXcfg.ini \
+    device/htc/mecha/system/etc/pvplayer2.yac:system/etc/pvplayer2.yac \
+    device/htc/mecha/system/etc/pvwmdrm.yac:system/etc/pvwmdrm.yac \
+    device/htc/mecha/system/etc/vomeComp_RTSP.cfg:system/etc/vomeComp_RTSP.cfg \
+    device/htc/mecha/system/etc/vomeComp.cfg:system/etc/vomeComp.cfg \
+    device/htc/mecha/system/etc/vomeCore.cfg:system/etc/vomeCore.cfg \
+    device/htc/mecha/system/etc/vomeplay.cfg:system/etc/vomeplay.cfg \
+    device/htc/mecha/system/etc/vommcodec.cfg:system/etc/vommcodec.cfg \
+    device/htc/mecha/system/etc/voPDLog.cfg:system/etc/voPDLog.cfg \
+    device/htc/mecha/system/etc/voVidDec.dat:system/etc/voVidDec.dat
+
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
