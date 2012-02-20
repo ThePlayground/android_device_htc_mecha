@@ -204,13 +204,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 # Kernel Modules
-PRODUCT_COPY_FILES += \
-    device/htc/mecha/kernel/lib/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/mecha/kernel/lib/modules/lzo_compress.ko:system/lib/modules/lzo_compress.ko \
-    device/htc/mecha/kernel/lib/modules/lzo_decompress.ko:system/lib/modules/lzo_decompress.ko \
-    device/htc/mecha/kernel/lib/modules/tun.ko:system/lib/modules/tun.ko \
-    device/htc/mecha/kernel/lib/modules/zram.ko:system/lib/modules/zram.ko \
-    device/htc/mecha/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
+PRODUCT_COPY_FILES += $(shell \
+    find device/htc/mecha/kernel/lib/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+    | tr '\n' ' ')
 
 # Kernel Customization
 PRODUCT_COPY_FILES += \
