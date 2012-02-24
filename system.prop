@@ -29,7 +29,7 @@ ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
 
 # Radio Properties
-rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libpath=/system/lib/libril-qc-1.so
 ro.telephony.ril.v3=signalstrength
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
