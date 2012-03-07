@@ -82,6 +82,8 @@ service.modem.enable=1
 wifi.interface=eth0
 wifi.supplicant_scan_interval=180
 
+mobiledata.interfaces=rmnet0,eth0
+
 # OpenGL ES API Level
 ro.opengles.version=131072
 
@@ -102,7 +104,3 @@ ro.config.htc.nocheckin = 1
 ro.cdma.home.operator.numeric=310012
 ro.cdma.home.operator.alpha=Verizon
 ro.htc.device.slot1=RUIM
-
-# USB Mount
-persist.sys.usb.config=mass_storage,adb
-persist.service.adb.enable=1
