@@ -10,17 +10,6 @@ ro.camera.preview=true
 debug.enabletr=false
 com.qc.hdmi_out=false
 
-# Stagefright
-media.stagefright.enable-player=true
-media.stagefright.enable-meta=true
-media.stagefright.enable-scan=true
-media.stagefright.enable-http=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-lpa.decode=true
-lpa.use-stagefright=true
-
 # Retry Configurations
 ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
