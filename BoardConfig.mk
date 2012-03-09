@@ -31,9 +31,6 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/htc/mecha/BoardConfigVendor.mk
 
-# Workaround for mecha broken overlay scaling
-BOARD_OVERLAY_MINIFICATION_LIMIT := 2
-
 TARGET_BOOTLOADER_BOARD_NAME := mecha
 
 # Use stock libril for now
@@ -46,9 +43,6 @@ USE_IPV6_ROUTE := true
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
 
-# Hack for improper scaling.
-# BOARD_OVERLAY_MINIFICATION_LIMIT := 2
-
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
@@ -60,7 +54,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 # TARGET_SPECIFIC_HEADER_PATH := device/htc/mecha/include
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
