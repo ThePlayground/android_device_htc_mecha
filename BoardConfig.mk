@@ -44,9 +44,9 @@ BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
 
 ifndef TARGET_DZO_CAMERA
-$(call inherit-product-if-exists, vendor/htc/mecha/mecha-sense-camera.mk)
+-include device/htc/mecha/camera/mecha-sense.mk
 else
-$(call inherit-product-if-exists, vendor/htc/mecha/mecha-aosp-camera.mk)
+-include device/htc/mecha/camera/mecha-aosp.mk
 endif
 
 # GPS Defines
