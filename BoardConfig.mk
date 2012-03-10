@@ -43,6 +43,12 @@ USE_IPV6_ROUTE := true
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
 
+ifndef TARGET_DZO_CAMERA
+$(call inherit-product-if-exists, vendor/htc/mecha/mecha-sense-camera.mk)
+else
+$(call inherit-product-if-exists, vendor/htc/mecha/mecha-aosp-camera.mk)
+endif
+
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
