@@ -43,12 +43,6 @@ USE_IPV6_ROUTE := true
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
 
-ifndef TARGET_DZO_CAMERA
--include device/htc/mecha/camera/mecha-sense.mk
-else
--include device/htc/mecha/camera/mecha-aosp.mk
-endif
-
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
