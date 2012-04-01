@@ -27,6 +27,7 @@ gsm.proximity.enable=1
 
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
+persist.sys.root_access=3
 
 # Retry Configurations
 ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
