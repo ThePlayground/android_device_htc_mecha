@@ -79,11 +79,8 @@ PRODUCT_COPY_FILES += \
 # Device XML Properties
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
-    device/htc/mecha/system/etc/apns-conf.xml:system/etc/apns-conf.xml
-
-# Device GPS Properties
-PRODUCT_COPY_FILES += \
-    device/htc/common/system/etc/gps.conf:system/etc/gps.conf
+    device/htc/mecha/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    device/htc/mecha/system/etc/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
     lights.mecha \
