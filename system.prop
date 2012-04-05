@@ -108,8 +108,9 @@ mobiledata.interfaces=rmnet0,eth0
 ro.opengles.version=131072
 
 # Dalvik Heapsize
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heapsize=64m
-dalvik.vm.heapgrowthlimit=32m
 
 # Agps Default Mode
 ro.ril.def.agps.mode=6
