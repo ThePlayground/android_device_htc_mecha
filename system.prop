@@ -23,7 +23,7 @@ wifi.supplicant_scan_interval=120
 
 # Playground Panel
 debug.enabletr=false
-gsm.proximity.enable=1
+gsm.proximity.enable=true
 ro.config.play.bootsound=1
 
 persist.sys.usb.config=mass_storage,adb
