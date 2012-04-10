@@ -11,7 +11,9 @@ dev.pm.dyn_samplingrate=1
 
 # Android Display
 windowsmgr.max_events_per_sec=275
+video.accelerate.hw=1
 ro.config.disable_hw_accel=false
+debug.performance.tuning=1
 debug.fb.rgb565=0
 debug.sf.hw=1
     
