@@ -55,11 +55,14 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_BASE := 0x05200000
 BOARD_PAGE_SIZE := 4096
+
+# TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
+TARGET_KERNEL_CONFIG := lean_aosp_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/mecha
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true

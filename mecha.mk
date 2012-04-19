@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2011 The Playground Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -186,12 +186,10 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/vold.fstab:system/etc/vold.fstab
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/mecha/kernel/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+ifneq ($(TARGET_PREBUILT_KERNEL),)
 
+# Local Kernel
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
@@ -200,6 +198,8 @@ PRODUCT_COPY_FILES += $(shell \
     find device/htc/mecha/kernel/lib/modules -name '*.ko' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
+
+endif
 
 # Kernel Customization
 PRODUCT_COPY_FILES += \
