@@ -60,9 +60,8 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_BASE := 0x05200000
 BOARD_PAGE_SIZE := 4096
 
-TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
-# TARGET_KERNEL_CONFIG := lean_aosp_defconfig
 # TARGET_KERNEL_SOURCE := kernel/htc/mecha
+# TARGET_KERNEL_CONFIG := lean_aosp_defconfig
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true

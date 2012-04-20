@@ -186,6 +186,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/vold.fstab:system/etc/vold.fstab
 
+TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
+
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 
 # Local Kernel
