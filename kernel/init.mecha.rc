@@ -17,6 +17,7 @@ on early-fs
     symlink /system/vendor/firmware/fw_bcm4329.bin /vendor/firmware/fw_bcm4329.bin
     symlink /system/vendor/firmware/fw_bcm4329_apsta.bin /vendor/firmware/fw_bcm4329_apsta.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
+    device mtd@misc 0460 radio diag
 
 on init
     # double check the perms and set owner
@@ -39,7 +40,7 @@ on boot
     # Startup frequencies
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1024000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor smartassV2
 
     # wifi
     mkdir /data/misc 1771 system misc
