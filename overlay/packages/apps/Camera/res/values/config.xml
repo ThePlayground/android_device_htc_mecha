@@ -15,12 +15,24 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Allows setting video size before recording starts -->
-    <bool name="needsEarlyVideoSize">true</bool>
+    <bool name="needsEarlyVideoSize">false</bool>
     <!-- Samsung Camcorder Mode -->
     <bool name="needsSamsungCamMode">false</bool>
+    <!-- HTC Camcorder Mode -->
+    <bool name="needsHTCCamMode">true</bool>
     <!-- Samsung Camera Settings -->
     <bool name="hasSamsungCamSettings">false</bool>
     <!-- The camera removes the focus modes by default when touch-to-focus
          exists. Use this option to change that behavior -->
     <bool name="wantsFocusModes">false</bool>
+    <!-- Don't mess with the preview size, always use preferred size from parameters -->
+    <bool name="alwaysUsePreferredPreviewSize">false</bool>
+    <!-- Restart the preview on picture taken -->
+    <bool name="restartPreviewOnPictureTaken">false</bool>
+    <!-- Disable face detection on the front camera -->
+    <bool name="noFaceDetectOnFrontCamera">false</bool>
+    <!-- Disable face detection on the rear camera -->
+    <bool name="noFaceDetectOnRearCamera">false</bool>
+    <!-- Use ZSL mode -->
+    <bool name="enableZSL">false</bool>
 </resources>
