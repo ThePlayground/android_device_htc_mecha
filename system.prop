@@ -50,12 +50,12 @@ net.tcp.buffersize.lte=4096,221184,3461120,4096,221184,3461120
 # Default Network
 # 8 => LTE/CDMA/EVDO mode
 ro.telephony.default_network=8
-ro.telephony.ril.v3=datacall,signalstrength
+ro.telephony.ril.v3=datacall,icccardstatus
 
 # Device Interfaces
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=180
-mobiledata.interfaces=rmnet0,rmnet_sdio0,rmnet1,rmnet_sdio1,data,gprs
+mobiledata.interfaces=rmnet_sdio0,wlan0,data,gprs
 
 # OpenGL Level
 ro.opengles.version=131072
