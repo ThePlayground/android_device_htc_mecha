@@ -15,7 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Allows setting video size before recording starts -->
-    <bool name="needsEarlyVideoSize">false</bool>
+    <bool name="needsEarlyVideoSize">true</bool>
     <!-- Samsung Camcorder Mode -->
     <bool name="needsSamsungCamMode">false</bool>
     <!-- HTC Camcorder Mode -->
