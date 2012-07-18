@@ -12,7 +12,7 @@ BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
 # Use stock libril for now
 TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril.so
-BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
+BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
 
 # camera fix for mecha

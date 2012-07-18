@@ -22,40 +22,17 @@ com.qc.hdmi_out=false
 # Radio Properties
 rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.rild.ril.bva=0
-persist.rild.ril.ltedr=0
-persist.rild.ril.ltedrtable=max_retries=infinite,10000
-persist.rild.ril.adminAPN=vzwadmin
 DEVICE_PROVISIONED=1
 
-# Data Modules
-ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=16
-persist.data_netmgrd_mtu=1428
-
-# Data Buffers
-net.tcp.buffersize.default=4096,87380,110208,4096,16384,110208
-net.tcp.buffersize.evdo_b=4094,87380,262144,4096,16384,262144
-net.tcp.buffersize.lte=4096,221184,3461120,4096,221184,3461120
-
 # Default Network
-# 8 => LTE/CDMA/EVDO mode
-ro.telephony.default_network=8
-ro.telephony.ril.v3=datacall,icccardstatus
+# 4 => CDMA/EVDO auto mode
+ro.telephony.default_network=4
+ro.telephony.ril.v3=datacall
 
 # Device Interfaces
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=180
-mobiledata.interfaces=rmnet_sdio0,wlan0,data,gprs
+mobiledata.interfaces=rmnet0,wlan0,data,gprs
 
 # OpenGL Level
 ro.opengles.version=131072
