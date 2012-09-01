@@ -2,17 +2,21 @@
 /dev/cpu_dma_latency    0660    system      system
 
 #radio
+/dev/oncrpc/*           0660    radio       system
 /dev/smdcntl0           0640    radio       radio
 /dev/smdcntl1           0640    radio       radio
 /dev/smdcntl2           0640    radio       radio
 /dev/radio_feedback     0660    radio       radio
+/dev/smd0               0640    radio       radio
 /dev/smd9               0600    system      system
+/dev/qmi0               0640    radio       radio
+/dev/qmi1               0640    radio       radio
+/dev/qmi2               0640    radio       radio
 /dev/tun                0660    system      vpn
 
 #sensors
 /dev/akm8975_daemon     0640    compass     system
 /dev/akm8975_aot        0640    compass     system
-/dev/oncrpc/*           0660    root        system
 
 #video
 /dev/gemini0            0660    system      camera
