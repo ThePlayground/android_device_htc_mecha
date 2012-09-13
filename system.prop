@@ -14,7 +14,7 @@ ro.sf.compbypass.enable=1
 debug.composition.type=dyn
 
 # Qcom Hardware
-debug.enabletr=true
+debug.enabletr=false
 com.qc.hardware=true
 com.qc.hdmi_out=false
 
