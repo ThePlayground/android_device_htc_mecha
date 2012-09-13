@@ -12,8 +12,7 @@ BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
 # Use stock libril for now
 TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril.so
-BOARD_USE_NEW_LIBRIL_HTC := true
-BOARD_HAS_EXTRA_SYS_PROPS := true
+BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 
 # camera fix for mecha
 BOARD_HAVE_HTC_FFC := true
@@ -34,6 +33,9 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # kernel configuration
+TARGET_KERNEL_SOURCE := kernel/htc/mecha
+TARGET_KERNEL_CONFIG := liquid_mecha_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7.2
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
