@@ -32,7 +32,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-htc \
     ro.com.google.clientidbase.yt=android-htc \
     ro.com.google.clientidbase.am=android-verizon \
-    ro.com.google.clientidbase.vs=android-verizon \
     ro.com.google.clientidbase.gmm=android-verizon \
     ro.com.google.clientidbase.ms=android-verizon \
     ro.com.google.locationfeatures=1 \
