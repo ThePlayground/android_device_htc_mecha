@@ -35,7 +35,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 # kernel configuration
 TARGET_KERNEL_SOURCE := kernel/htc/mecha
 TARGET_KERNEL_CONFIG := liquid_mecha_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7.2
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -50,3 +49,4 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
+
