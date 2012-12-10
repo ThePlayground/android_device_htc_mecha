@@ -13,6 +13,7 @@
 /dev/htc-acoustic       0660    system      audio
 /dev/msm_amrnb*         0660    system      audio
 /dev/msm_aac*           0660    system      audio
+/dev/msm_mvs            0660    system      audio
 
 #bluetooth
 /dev/ttyHS0             0660    bluetooth   bluetooth
@@ -48,7 +49,7 @@
 /dev/qmi1               0640    radio       radio
 /dev/qmi2               0640    radio       radio
 /dev/ppp                0660    radio       vpn
-/dev/tun                0640    vpn         vpn
+/dev/tun                0660    system      vpn
 
 #sensors
 /dev/akm8975_daemon     0640    compass     system
