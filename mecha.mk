@@ -151,23 +151,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/vold.fstab:system/etc/vold.fstab
 
-# TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
-
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-
-# Local Kernel
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-# Kernel Modules
-PRODUCT_COPY_FILES += $(shell \
-    find device/htc/mecha/kernel/lib/modules -name '*.ko' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
-
-endif
-
 # Kernel Customization
 PRODUCT_COPY_FILES += \
     device/htc/mecha/kernel/sbin/zram:root/sbin/zram \
