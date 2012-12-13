@@ -67,7 +67,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.be.wlan.sqi.min=0 \
     persist.cne.be.wlan.sqi.max=100
     persist.telephony.support_ipv6=true \
-    persist.telephony.support_ipv4=true
+    persist.telephony.support_ipv4=true \
+    ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/mecha/overlay
 
@@ -174,8 +175,19 @@ $(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
-PRODUCT_BRAND := HTC
+PRODUCT_BRAND := verizon_wwe
 PRODUCT_NAME := htc_mecha
 PRODUCT_DEVICE := mecha
-PRODUCT_MODEL := ADR6400L
+PRODUCT_MODEL := ThunderBolt
 PRODUCT_MANUFACTURER := HTC
+PRODUCT_PROPERTY_OVERRIDES += ro.modversion=playground.ics.$(shell date +%m%d%y).$(shell date +%H%M%S)
+
+# overrides
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_ID=IML74K \
+    BUILD_NUMBER=370649.2 \
+    PRODUCT_NAME=htc_mecha \
+    TARGET_BUILD_TYPE=user \
+    BUILD_VERSION_TAGS=release-keys \
+    PRIVATE_BUILD_DESC="7.00.605.2 CL370649 release-keys" \
+    BUILD_FINGERPRINT=verizon_wwe/htc_mecha/mecha:4.0.3/IML74K/370649.2:user/release-keys

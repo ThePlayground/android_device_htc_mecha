@@ -34,7 +34,7 @@ USE_CAMERA_STUB := true
 TARGET_BOOTLOADER_BOARD_NAME := mecha
 
 # Use stock libril for now
-TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril-qc-1.so
+TARGET_PROVIDES_LIBRIL := vendor/htc/mecha/proprietary/libril.so
 BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 BOARD_HAS_EXTRA_SYS_PROPS := true
 USE_IPV6_ROUTE := true
