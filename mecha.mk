@@ -80,9 +80,10 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/mecha/system/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/mecha/system/etc/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
+    device/htc/mecha/system/etc/firmware/mp2_dec_mc.fw:system/etc/firmware/mp2_dec_mc.fw  \
     device/htc/mecha/system/vendor/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    device/htc/mecha/system/vendor/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/htc/mecha/system/vendor/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
+    device/htc/mecha/system/vendor/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin \
+    device/htc/mecha/system/vendor/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin
 
 # profiles
 PRODUCT_COPY_FILES += $(shell \
@@ -104,6 +105,11 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/system/etc/SPK_Combination.csv:system/etc/SPK_Combination.csv \
     device/htc/mecha/system/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
 
+# agps patch
+PRODUCT_COPY_FILES += \
+    device/htc/mecha/system/etc/gps.conf:system/etc/gps.conf \
+    device/htc/mecha/system/etc/SuplRootCert:system/etc/SuplRootCert
+
 # base
 $(call inherit-product, build/target/product/full_base.mk)
 
@@ -114,12 +120,12 @@ $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 $(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 # products
-PRODUCT_NAME := liquid_mecha
+PRODUCT_NAME := htc_mecha
 PRODUCT_BRAND := verizon_wwe
 PRODUCT_DEVICE := mecha
 PRODUCT_MODEL := ThunderBolt
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_PROPERTY_OVERRIDES += ro.modversion=liquid.mecha.$(shell date +%m%d%y).$(shell date +%H%M%S)
+PRODUCT_PROPERTY_OVERRIDES += ro.modversion=mecha.ics.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \

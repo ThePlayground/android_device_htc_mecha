@@ -34,7 +34,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 # kernel configuration
 TARGET_KERNEL_SOURCE := kernel/htc/mecha
-TARGET_KERNEL_CONFIG := liquid_mecha_defconfig
+TARGET_KERNEL_CONFIG := mecha_defconfig
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/mecha/kernel/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
