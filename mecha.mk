@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # media
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/media/hdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/twisted/prebuilt/common/media/hdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # amtel
 PRODUCT_COPY_FILES += \
@@ -117,7 +117,7 @@ $(call inherit-product, build/target/product/full_base.mk)
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # vendor
-$(call inherit-product, vendor/liquid/config/common_phone.mk)
+$(call inherit-product, vendor/twisted/config/common_phone.mk)
 
 # products
 PRODUCT_NAME := htc_mecha
