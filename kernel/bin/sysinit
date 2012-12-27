@@ -7,3 +7,8 @@ if [ -e /data/data/com.google.android.gallery3d ]; then
         /system/xbin/busybox sed -i 's/<string name=\"pref_camera_id_key\">1<\/string>/<string name=\"pref_camera_id_key\">0<\/string>/g' /data/data/com.google.android.gallery3d/shared_prefs/com.google.android.gallery3d_preferences.xml
     fi
 fi
+if [ -e /data/data/com.android.camera ]; then
+    if [ -e /data/data/com.android.camera/shared_prefs ]; then
+        /system/xbin/busybox sed -i 's/<string name=\"pref_camera_id_key\">1<\/string>/<string name=\"pref_camera_id_key\">0<\/string>/g' /data/data/com.android.camera/shared_prefs/com.android.camera_preferences.xml
+    fi
+fi
