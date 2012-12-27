@@ -17,6 +17,7 @@ BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 # camera fix for mecha
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
+TARGET_INVERSE_ROTATE := true
 
 # gps fix for mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
