@@ -10,10 +10,10 @@ on early-fs
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
-    mount ext4 /dev/block/mmcblk0p25 /system wait ro noatime nodiratime nouser_xattr barrier=0
-    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nodiratime nosuid nodev noauto_da_alloc nouser_xattr barrier=0
-    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev nouser_xattr barrier=0
-    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nodiratime nosuid nodev nouser_xattr barrier=0
+    mount ext4 /dev/block/mmcblk0p25 /system wait ro noatime nodiratime nouser_xattr
+    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nodiratime nosuid nodev noauto_da_alloc nouser_xattr
+    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev nouser_xattr
+    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nodiratime nosuid nodev nouser_xattr
     symlink /system/vendor/firmware/fw_bcm4329.bin /vendor/firmware/fw_bcm4329.bin
     symlink /system/vendor/firmware/fw_bcm4329_apsta.bin /vendor/firmware/fw_bcm4329_apsta.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
